@@ -2,8 +2,8 @@ import cv2
 from circular_buffer import CircularBuffer
 from pynput.mouse import Button, Controller
 
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('cascade_files/haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('cascade_files/haarcascade_eye_tree_eyeglasses.xml')
 vid = cv2.VideoCapture(0)
 roi_gray = None
 roi_color = None
@@ -18,7 +18,7 @@ while vid.isOpened():
     width = int(frame.shape[1] * 25/ 100)
     height = int(frame.shape[0] * 25/ 100)
     dim = (width, height)
-    frame = cv2.resize(frame, dim, interpolation =cv2.INTER_AREA)
+    frame = cv2.resize(frame, dim, interpolation = cv2.INTER_AREA)
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)
@@ -38,7 +38,7 @@ while vid.isOpened():
 
     circular_buffer.record(len(eyes))
     previous_iteration = eyes_on_screen
-    eyes_on_screen = sum([num > 0 for num in circular_buffer.log]) > circular_buffer.max_size // 2
+    eyes_on_screen = sum([num > 0 for num in circular_buffer.log]) > circular_buffer.max_size / 2
 
     if previous_iteration != eyes_on_screen:
         mouse.position = (500, 500)
