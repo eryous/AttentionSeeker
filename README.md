@@ -18,3 +18,5 @@ To run the code from the terminal, clone the repo and run the following commands
 - The closer you are to the camera, the better it works. This is perfect for watching videos on your laptop or at your desk
 - Works optimally on people who are not wearing glasses
 - This works both on fullscreen and windowed video settings
+
+![Demo]("https://media3.giphy.com/media/QVOfyeG7A1ZaxkVzZp/giphy.gif")
