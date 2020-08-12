@@ -19,4 +19,4 @@ To run the code from the terminal, clone the repo and run the following commands
 - Works optimally on people who are not wearing glasses
 - This works both on fullscreen and windowed video settings
 
-[Click to view demo here!](https://www.dropbox.com/home?preview=Attention+Seeker+Example.mp4)
+[Click to view demo here!]("https://media.giphy.com/media/QVOfyeG7A1ZaxkVzZp/giphy.gif")
